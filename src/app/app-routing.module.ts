@@ -15,6 +15,10 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'crear-alarma',
+    loadChildren: () => import('./crear-alarma/crear-alarma.module').then( m => m.CrearAlarmaPageModule)
+  },
 ];
 
 @NgModule({
