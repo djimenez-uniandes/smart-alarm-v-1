@@ -1,8 +1,22 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
+<ion-header [translucent]="true" class="ion-no-border">
+
+  <ion-toolbar class="toolbar-no-elevation">
+
+    <ion-buttons slot="primary">
+      <ion-button class="boton-redondo-primary">
+        <ion-icon slot="icon-only" name="time-outline"></ion-icon>
+      </ion-button>
+      <ion-button class="boton-redondo-secundary">
+        <ion-icon slot="icon-only" name="copy-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
     <ion-title>
-      Inbox
+      <ion-img
+        src="../../assets/images/SMART ALARM APP.png"
+        alt="SMART ALARM" class="logo_smart_alarm"
+      ></ion-img>
     </ion-title>
+
   </ion-toolbar>
 </ion-header>
 
@@ -10,16 +24,110 @@
   <ion-refresher slot="fixed" (ionRefresh)="refresh($event)">
     <ion-refresher-content></ion-refresher-content>
   </ion-refresher>
-  
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">
-        Inbox
-      </ion-title>
-    </ion-toolbar>
-  </ion-header>
-  
-  <ion-list>
-    <app-message *ngFor="let message of getMessages()" [message]="message"></app-message>
-  </ion-list>
+
+  <ion-card class="tarjeta-alarma" style="margin-top: 26px;">
+    <ion-grid>
+      <ion-row>
+        <ion-col class="col-icono-categoria-alarma" size="auto">
+          <ion-fab class="icono-categoria-alarma">
+            <ion-fab-button>
+              H
+            </ion-fab-button>
+          </ion-fab>
+        </ion-col>
+        <ion-col>
+          <ion-card-header>
+            <ion-card-title class="hora-alarma">7:00 <span class="am-pm">AM</span></ion-card-title>
+            <ion-card-subtitle><ion-icon class="icon-repeir-alarma" name="repeat-sharp"></ion-icon> <span class="nombre-alarma">DESPERTAR</span></ion-card-subtitle>
+          </ion-card-header>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card>
+
+
+  <ion-card class="tarjeta-alarma">
+    <ion-grid>
+      <ion-row>
+        <ion-col class="col-icono-categoria-alarma" size="auto">
+          <ion-fab class="icono-categoria-alarma">
+            <ion-fab-button>
+              M
+            </ion-fab-button>
+          </ion-fab>
+        </ion-col>
+        <ion-col>
+          <ion-card-header>
+            <ion-card-title class="hora-alarma">8:00 <span class="am-pm">AM</span></ion-card-title>
+            <ion-card-subtitle><ion-icon class="icon-repeir-alarma" name="repeat-sharp"></ion-icon> <span class="nombre-alarma">LOSARTAN</span></ion-card-subtitle>
+          </ion-card-header>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card>
+
+  <ion-card class="tarjeta-alarma">
+    <ion-grid>
+      <ion-row>
+        <ion-col class="col-icono-categoria-alarma" size="auto">
+          <ion-fab class="icono-categoria-alarma">
+            <ion-fab-button>
+              P
+            </ion-fab-button>
+          </ion-fab>
+        </ion-col>
+        <ion-col>
+          <ion-card-header>
+            <ion-card-title class="hora-alarma">2:00 <span class="am-pm">PM</span></ion-card-title>
+            <ion-card-subtitle class="nombre-alarma fecha-alarma">DOMINGO 11 DE FEBRERO</ion-card-subtitle>
+          </ion-card-header>
+
+          <ion-card-content>
+            <span class="nombre-alarma">SALITRE MÁGICO</span>
+          </ion-card-content>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card>
+
+  <ion-card class="tarjeta-alarma">
+    <ion-grid>
+      <ion-row>
+        <ion-col class="col-icono-categoria-alarma" size="auto">
+          <ion-fab class="icono-categoria-alarma">
+            <ion-fab-button>
+              M
+            </ion-fab-button>
+          </ion-fab>
+        </ion-col>
+        <ion-col>
+          <ion-card-header>
+            <ion-card-title class="hora-alarma">2:00 <span class="am-pm">PM</span></ion-card-title>
+            <ion-card-subtitle><ion-icon class="icon-repeir-alarma" name="repeat-sharp"></ion-icon> <span class="nombre-alarma">LOSARTAN</span></ion-card-subtitle>
+          </ion-card-header>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card>
+
+  <ion-card class="tarjeta-alarma">
+    <ion-grid>
+      <ion-row>
+        <ion-col class="col-icono-categoria-alarma" size="auto">
+          <ion-fab class="icono-categoria-alarma">
+            <ion-fab-button>
+              M
+            </ion-fab-button>
+          </ion-fab>
+        </ion-col>
+        <ion-col>
+          <ion-card-header>
+            <ion-card-title class="hora-alarma">8:00 <span class="am-pm">PM</span></ion-card-title>
+            <ion-card-subtitle><ion-icon class="icon-repeir-alarma" name="repeat-sharp"></ion-icon> <span class="nombre-alarma">LOSARTAN</span></ion-card-subtitle>
+          </ion-card-header>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card>
+
 </ion-content>

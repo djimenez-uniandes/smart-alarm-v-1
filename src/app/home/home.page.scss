@@ -1,0 +1,104 @@
+.logo_smart_alarm{
+  margin-top: 22px;
+  width: 91px;
+}
+
+.boton-redondo-primary{
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background-color: #8B4F25;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  margin-top: 36px !important;
+  margin-right: 21px !important;
+}
+
+.boton-redondo-secundary{
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background-color: #FFDBC8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  margin-top: 36px !important;
+  margin-right: 12px !important;
+
+}
+
+.boton-redondo-primary ion-icon {
+  color: white;
+  font-size: 25px;
+}
+
+.boton-redondo-secundary ion-icon {
+  color: black;
+  font-size: 25px;
+}
+
+.tarjeta-alarma{
+  border-radius: 6px;
+  background: var(--M3-sys-light-surface, #FFF8F5);
+  box-shadow: 0px 2px 2px 0px rgba(139, 79, 37, 0.70);
+  text-align: right;
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-bottom: 15px;
+}
+
+.tarjeta-alarma ion-card-header{
+  padding-bottom: 0px;;
+}
+
+.hora-alarma{
+  font-family: Roboto;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 40px; /* 125% */
+}
+
+.am-pm{
+  font-family: "Google Sans Text";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: bold;
+  line-height: 24px;
+
+}
+
+.nombre-alarma{
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 142.857% */
+  letter-spacing: 0.25px;
+  color: black;
+  position: relative;
+  top: -8px;
+  margin-left: 10px;
+}
+
+.fecha-alarma{
+  font-weight: bold;
+}
+
+.icon-repeir-alarma{
+  font-size: 24px;
+  color: black;
+}
+
+.col-icono-categoria-alarma{
+  display: flex !important;
+  align-items: center !important;
+}
+
+.icono-categoria-alarma ion-fab-button{
+  font-size: 24px;
+  --background: #6A340C;
+}
