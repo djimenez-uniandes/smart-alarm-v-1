@@ -1,16 +1,12 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { CrearAlarmaPage } from './crear-alarma.page';
+import { SplashScreenPage } from './splash-screen.page';
 
 const routes: Routes = [
   {
     path: '',
-    component: CrearAlarmaPage
-  },
-  {
-    path:":e",
-    component:CrearAlarmaPage
+    component: SplashScreenPage
   }
 ];
 
@@ -18,4 +14,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class CrearAlarmaPageRoutingModule {}
+export class SplashScreenPageRoutingModule {}

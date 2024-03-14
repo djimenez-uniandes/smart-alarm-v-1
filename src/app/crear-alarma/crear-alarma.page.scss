@@ -99,3 +99,42 @@ ion-input{
   border: solid 1px red;
 }
 */
+
+
+.ion-modal-nueva-categoria {
+  --height: 280px;
+  --width: 94%;
+  --border-radius: 16px;
+  --box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+
+.ion-modal-guardar {
+  --height: 230px;
+  --width: 94%;
+  --border-radius: 16px;
+  --box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+ion-modal::part(backdrop) {
+  background: rgba(209, 213, 219);
+  opacity: 1;
+}
+
+ion-modal ion-toolbar {
+  --background: #FFF8F5;
+  --color: #52443C;
+}
+
+.div-alarma-congigurada-exitosamente {
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 22px;
+}
+
+.div-boton-alarma-congigurada-exitosamente {
+  width: 100%;
+  text-align: center;
+  font-size: 22px;
+}

@@ -1,13 +1,13 @@
 <ion-toolbar color="secondary">
   <ion-buttons slot="primary">
-    <ion-button fill="solid" shape="round" color="primary">
+    <ion-button id="present-alert" fill="solid" shape="round" color="primary">
       <span class="label-boton-guardar">GUARDAR</span>
     </ion-button>
   </ion-buttons>
   <ion-buttons slot="start">
     <ion-back-button default-href="#"></ion-back-button>
   </ion-buttons>
-  <ion-title class="titulo-pantalla">CREAR ALARMA</ion-title>
+  <ion-title class="titulo-pantalla">{{pageTitle}}</ion-title>
 </ion-toolbar>
 
 <ion-content [fullscreen]="true" class="crear-alarma-content">
@@ -32,7 +32,7 @@
       <ion-col class="columna-agregar-categoria" size="auto">
         <div class="div-columna-agregar-categoria"></div>
         <ion-fab>
-          <ion-fab-button size="small" color="light">
+          <ion-fab-button id="agregar-categoria" size="small" color="light">
             <ion-icon name="add"></ion-icon>
           </ion-fab-button>
         </ion-fab>
@@ -65,7 +65,68 @@
     </ion-item>
   </ion-list>
 
+<ion-modal #modal trigger="agregar-categoria" class="ion-modal-nueva-categoria">
+  <ng-template>
+    <ion-content>
+      <ion-toolbar>
+        <ion-title>NUEVA CATEGORÍA</ion-title>
+        <ion-buttons slot="end">
+          <ion-button color="primary" (click)="modal.dismiss()">X</ion-button>
+        </ion-buttons>
+      </ion-toolbar>
+      <ion-list lines="none">
+        <ion-item>
+          <ion-input label="NOMBRE" label-placement="stacked" fill="outline" placeholder="Ingrese el nombre" style="margin-top: 20px;"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-item-divider></ion-item-divider>
+        </ion-item>
+        <ion-item>
+          <ion-grid>
+            <ion-row>
+              <ion-col>
+                  <ion-button (click)="modal.dismiss()"  fill="solid" shape="round" color="primary">
+                    <span class="label-boton-guardar">GUARDAR</span>
+                  </ion-button>
+              </ion-col>
+              <ion-col>
+                <ion-col>
+                  <ion-button (click)="modal.dismiss()" fill="outline" shape="round" color="primary">
+                    <span class="label-boton-guardar">CANCELAR</span>
+                  </ion-button>
+              </ion-col>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-item>
+      </ion-list>
+    </ion-content>
+  </ng-template>
+</ion-modal>
 
+<ion-modal #modal2 trigger="present-alert" class="ion-modal-guardar">
+  <ng-template>
+    <ion-content>
+      <ion-toolbar>
+        <ion-title>ALARMA</ion-title>
+        <ion-buttons slot="end">
+          <ion-button color="primary" (click)="modal2.dismiss()">X</ion-button>
+        </ion-buttons>
+      </ion-toolbar>
+      <div class="div-alarma-congigurada-exitosamente">CONGIFUGURADA <br/>EXITOSAMENTE</div>
+      <ion-item-divider></ion-item-divider>
+      <ion-list lines="none">
+        <ion-item>
+          <div class="div-boton-alarma-congigurada-exitosamente">
+            <ion-button (click)="modal2.dismiss(); goHome()" fill="solid" shape="round" color="primary">
+              <span class="label-boton-guardar">ACEPTAR</span>
+            </ion-button>
+          </div>
+        </ion-item>
+      </ion-list>
+    </ion-content>
+  </ng-template>
+</ion-modal>
 </ion-content>
 
 

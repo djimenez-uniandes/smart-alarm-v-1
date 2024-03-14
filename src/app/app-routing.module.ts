@@ -12,12 +12,16 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'splash-screen',
     pathMatch: 'full'
   },
   {
     path: 'crear-alarma',
     loadChildren: () => import('./crear-alarma/crear-alarma.module').then( m => m.CrearAlarmaPageModule)
+  },
+  {
+    path: 'splash-screen',
+    loadChildren: () => import('./splash-screen/splash-screen.module').then( m => m.SplashScreenPageModule)
   },
 ];
 

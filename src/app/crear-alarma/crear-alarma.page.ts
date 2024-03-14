@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-crear-alarma',
@@ -7,9 +8,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CrearAlarmaPage implements OnInit {
 
-  constructor() { }
-
+  constructor(private router:Router, private route: ActivatedRoute) { }
+  alertButtons = ['Action'];
+  public pageTitle= "CREAR ALARMA"
   ngOnInit() {
+    this.alertButtons = ['Action'];
+
+    this.route.params.subscribe(params => {
+      const a = params['e'];
+      console.log(a)
+      if (a) {
+        this.pageTitle = "EDITAR ALARMA"; // Cambiar el título si la variable existe
+      }
+    });
+  }
+  goHome(){
+    this.router.navigate(["home"]);
   }
 
 }
